@@ -15,7 +15,7 @@ pipeline{
         }
         stage ('deploy war file'){
             steps{
-                sh "cp -r /mnt/git-project/webapp/target/WebApp.war /mnt/docker"
+                sh "cp -r /mnt/git-project/target/WebApp.war /mnt/docker"
             }
         }
         stage ('create custom-image from dockerfile'){
